@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 
 
 function App() {
-  const [show, setShow] = useState(films);
+  const [shows, setShows] = useState(films);
   const [search, setSearch] = useState("");
-  const [filteredSearch, setFilteredSearch] = useState(show);
+  const [filteredSearch, setFilteredSearch] = useState(shows);
 
   const films = [
     { title: 'Inception', genre: 'Fantascienza' },
@@ -16,14 +16,17 @@ function App() {
   ];
 
   useEffect(() => {
-
+    const filteredArray = shows.filter((show) => {
+      return show.includes(search);
+    })
+    setFilteredSearch(filteredArray)
   }, [search])
 
   return (
     <>
       <select name="arrayFilms" id="films">
         <option value="" disabled selected>Seleziona un elemento</option>
-        {films.map((film, index) => (
+        {filteredSearch.map((film, index) => (
           <option value="Inception" key={index}>
             {film.title}
           </option>
