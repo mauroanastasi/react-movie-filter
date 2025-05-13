@@ -13,7 +13,14 @@ function App() {
 
   return (
     <>
-
+      <select name="arrayFilms" id="films">
+        <option value="Inception"></option>
+        <option value="Il Padrino"></option>
+        <option value="Titanic"></option>
+        <option value="Batman"></option>
+        <option value="Interstellar"></option>
+        <option value="Pulp Fiction"></option>
+      </select>
     </>
   )
 }
