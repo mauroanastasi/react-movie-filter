@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function App() {
   const [show, setShow] = useState(films);
-  const [searc, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   const films = [
     { title: 'Inception', genre: 'Fantascienza' },
@@ -24,7 +24,12 @@ function App() {
           </option>
         ))}
       </select>
-      <div></div>
+      <div value={search} onChange={(e) => {
+        {
+          setSearch(e.target.value);
+        }
+      }
+      }></div>
     </>
   )
 }
