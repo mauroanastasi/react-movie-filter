@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 
 function App() {
-  const [show, setShow] = useState(films)
+  const [show, setShow] = useState(films);
+  const [searc, setSearch] = useState("");
 
   const films = [
     { title: 'Inception', genre: 'Fantascienza' },
