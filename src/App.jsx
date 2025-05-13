@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 function App() {
@@ -13,6 +13,10 @@ function App() {
     { title: 'Interstellar', genre: 'Fantascienza' },
     { title: 'Pulp Fiction', genre: 'Thriller' },
   ];
+
+  useEffect(() => {
+
+  }, [search])
 
   return (
     <>
