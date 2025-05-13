@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 
 function App() {
+  const [show, setShow] = useState(films)
+
   const films = [
     { title: 'Inception', genre: 'Fantascienza' },
     { title: 'Il Padrino', genre: 'Thriller' },
@@ -14,12 +16,14 @@ function App() {
   return (
     <>
       <select name="arrayFilms" id="films">
+        <option value="" disabled selected>Seleziona un elemento</option>
         {films.map((film, index) => (
           <option value="Inception" key={index}>
             {film.title}
           </option>
         ))}
       </select>
+      <div></div>
     </>
   )
 }
